@@ -1,0 +1,584 @@
+<html>
+<head>
+<title>WE:Gallery</title>
+
+
+
+<style>
+.img1
+{
+margin-left:1in;
+margin-top:20px;
+float:left;
+}
+.img2
+{
+margin-right:.6in;
+margin-top:60px;
+float:right;
+}
+
+.img3
+{
+
+margin-top:43px;
+float:right;
+}
+
+div.middle
+{
+margin-left:2in;
+margin-right:2in;
+text-align:justify;
+font-family:ISOCPEUR;
+font-size:22;
+}
+
+.stage {
+margin-left:1in;
+float:left;
+width: 300px; height: 300px;
+  -webkit-perspective: 1600px;
+  -webkit-perspective-origin: 50% -240px;
+}
+
+figure {
+  display: block; position: absolute;
+  width: 300px; height: 300px;
+  background-image: url('.jpg');
+  background-size: 100%;
+
+  -webkit-box-reflect: below 0 -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(RGBA(0, 0, 0, 0.1)));
+}
+
+.cube { -webkit-transform-style: preserve-3d; }
+figure { -webkit-transform-origin: 50% 50% 0; }
+.front { -webkit-transform: translateZ(150px); 
+  background: #e0e0e0 url('5.jpg') no-repeat;
+  background-size: 150%;
+}
+.back { -webkit-transform: rotateY(180deg) translateZ(150px); 
+  background: #e0e0e0 url('1.jpg') no-repeat;
+background-size: 160%;
+}
+
+.top
+ {
+ -webkit-transform: rotateX(90deg) translateZ(150px); 
+background: #e0e0e0 url('2.jpg') no-repeat;
+background-size: 150%;
+
+}
+.bottom { -webkit-transform: rotateX(-90deg) translateZ(150px); 
+}
+.left { -webkit-transform: rotateY(-90deg) translateZ(150px); 
+  background: #e0e0e0 url('3.jpg') no-repeat;
+background-size: 150%;
+}
+.right { -webkit-transform: rotateY(90deg) translateZ(150px); 
+  background: #e0e0e0 url('4.jpg') no-repeat;
+background-size: 150%;
+}
+
+@-webkit-keyframes rotate {
+  0% { -webkit-transform: rotateY(0); }
+  100% { -webkit-transform: rotateY(360deg); }
+}
+
+.cube { -webkit-animation: rotate 10s infinite linear; }
+
+
+
+.front:before { -webkit-animation: frontShading1 10s infinite linear; }
+
+@-webkit-keyframes frontShading1 {
+  2% { opacity: 0; }
+  25% { opacity: 0.8; }
+  35% { opacity: 0.8; }
+  50% { opacity: 0; }
+}
+
+.top:after {
+  opacity: 0.5; width: 200%; height: 200%;
+  margin-left: -50%; margin-top: -50%;
+  background: -webkit-radial-gradient(bottom, rgba(0, 0, 0, 0), #000000);
+-webkit-animation: rotateTop 10s infinite linear;
+}
+@-webkit-keyframes rotateTop {
+  0% { -webkit-transform: rotateZ(0); }
+  100% { -webkit-transform: rotateZ(360deg); }
+}
+
+.bottom {
+  -webkit-box-shadow: 0 10px 100px rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.stage1 {
+margin-right:1in;
+float:right;
+width: 300px; height: 300px;
+  -webkit-perspective: 1600px;
+  -webkit-perspective-origin: 50% -240px;
+}
+
+figure1 {
+  display: block; position: absolute;
+  width: 300px; height: 300px;
+  background-image: url('.jpg');
+  background-size: 100%;
+
+  -webkit-box-reflect: below 0 -webkit-gradient(linear, right top, right bottom, from(transparent), color-stop(50%, transparent), to(RGBA(0, 0, 0, 0.1)));
+}
+
+.cube1 { -webkit-transform-style: preserve-3d; }
+figure1 { -webkit-transform-origin: 50% 50% 0; }
+.front1 { -webkit-transform: translateZ(150px); 
+  background: #e0e0e0 url('6.jpg') no-repeat;
+}
+.back1 { -webkit-transform: rotateY(180deg) translateZ(150px); 
+  background: #e0e0e0 url('7.jpg') no-repeat;
+}
+
+.top1
+ {
+ -webkit-transform: rotateX(90deg) translateZ(150px); 
+background-image: url('8.jpg');
+  background-size: 100%;
+
+}
+.bottom1 { -webkit-transform: rotateX(-90deg) translateZ(150px); 
+}
+.left1 { -webkit-transform: rotateY(-90deg) translateZ(150px); 
+  background: #e0e0e0 url('9.jpg') no-repeat;
+background-size: 150%;
+}
+.right1 { -webkit-transform: rotateY(90deg) translateZ(150px); 
+  background: #e0e0e0 url('10.jpg') no-repeat;
+background-size: 150%;
+}
+
+@-webkit-keyframes rotate {
+  0% { -webkit-transform: rotateY(0); }
+  100% { -webkit-transform: rotateY(360deg); }
+}
+
+.cube1 { -webkit-animation: rotate 10s infinite linear; }
+
+
+
+.front1:before { -webkit-animation: frontShading1 10s infinite linear; }
+
+@-webkit-keyframes frontShading1 {
+  2% { opacity: 0; }
+  25% { opacity: 0.8; }
+  35% { opacity: 0.8; }
+  50% { opacity: 0; }
+}
+
+.top1:after {
+  opacity: 0.5; width: 200%; height: 200%;
+  margin-right: -50%; margin-top: -50%;
+  background: -webkit-radial-gradient(bottom, rgba(0, 0, 0, 0), #000000);
+-webkit-animation: rotateTop 10s infinite linear;
+}
+@-webkit-keyframes rotateTop {
+  0% { -webkit-transform: rotateZ(0); }
+  100% { -webkit-transform: rotateZ(360deg); }
+}
+
+.bottom1 {
+  -webkit-box-shadow: 0 10px 100px rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0);
+}
+
+
+
+
+
+
+
+
+
+.stage2 {
+margin-left:1in;
+float:left;
+margin-top:4in;
+  width: 300px; height: 300px;
+  -webkit-perspective: 1600px;
+  -webkit-perspective-origin: 50% -240px;
+}
+
+figure2 {
+  display: block; position: absolute;
+  width: 300px; height: 300px;
+  background-image: url('.jpg');
+  background-size: 100%;
+
+  -webkit-box-reflect: below 0 -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(RGBA(0, 0, 0, 0.1)));
+}
+
+.cube2 { -webkit-transform-style: preserve-3d; }
+figure2 { -webkit-transform-origin: 50% 50% 0; }
+.front2 { -webkit-transform: translateZ(150px); 
+  background: #e0e0e0 url('11.jpg') no-repeat;
+}
+.back2 { -webkit-transform: rotateY(180deg) translateZ(150px); 
+  background: #e0e0e0 url('12.jpg') no-repeat;
+}
+
+.top2
+ {
+ -webkit-transform: rotateX(90deg) translateZ(150px); 
+background-image: url('13.jpg');
+  background-size: 100%;
+
+}
+.bottom2 { -webkit-transform: rotateX(-90deg) translateZ(150px); 
+}
+.left2 { -webkit-transform: rotateY(-90deg) translateZ(150px); 
+  background: #e0e0e0 url('14.jpg') no-repeat;
+background-size: 150%;
+}
+.right2 { -webkit-transform: rotateY(90deg) translateZ(150px); 
+  background: #e0e0e0 url('15.jpg') no-repeat;
+background-size: 150%;
+}
+
+@-webkit-keyframes rotate {
+  0% { -webkit-transform: rotateY(0); }
+  100% { -webkit-transform: rotateY(360deg); }
+}
+
+.cube2 { -webkit-animation: rotate 10s infinite linear; }
+
+
+
+.front2:before { -webkit-animation: frontShading1 10s infinite linear; }
+
+@-webkit-keyframes frontShading1 {
+  2% { opacity: 0; }
+  25% { opacity: 0.8; }
+  35% { opacity: 0.8; }
+  50% { opacity: 0; }
+}
+
+.top2:after {
+  opacity: 0.5; width: 200%; height: 200%;
+  margin-right: -50%; margin-top: -50%;
+  background: -webkit-radial-gradient(bottom, rgba(0, 0, 0, 0), #000000);
+-webkit-animation: rotateTop 10s infinite linear;
+}
+@-webkit-keyframes rotateTop {
+  0% { -webkit-transform: rotateZ(0); }
+  100% { -webkit-transform: rotateZ(360deg); }
+}
+
+.bottom2 {
+  -webkit-box-shadow: 0 10px 100px rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0);
+}
+
+
+
+
+
+
+
+
+
+
+
+.stage3 {
+margin-right:1in;
+float:right;
+margin-top:5in;
+  width: 300px; height: 300px;
+  -webkit-perspective: 1600px;
+  -webkit-perspective-origin: 50% -240px;
+}
+
+figure3 {
+  display: block; position: absolute;
+  width: 300px; height: 300px;
+  background-image: url('.jpg');
+  background-size: 100%;
+
+  -webkit-box-reflect: below 0 -webkit-gradient(linear, right top, right bottom, from(transparent), color-stop(50%, transparent), to(RGBA(0, 0, 0, 0.1)));
+}
+
+.cube3 { -webkit-transform-style: preserve-3d; }
+figure3 { -webkit-transform-origin: 50% 50% 0; }
+.front3 { -webkit-transform: translateZ(150px); 
+  background: #e0e0e0 url('16.jpg') no-repeat;
+}
+.back3 { -webkit-transform: rotateY(180deg) translateZ(150px); 
+  background: #e0e0e0 url('17.jpg') no-repeat;
+}
+
+.top3
+ {
+ -webkit-transform: rotateX(90deg) translateZ(150px); 
+background-image: url('18.jpg');
+  background-size: 100%;
+
+}
+.bottom3 { -webkit-transform: rotateX(-90deg) translateZ(150px); 
+}
+.left3 { -webkit-transform: rotateY(-90deg) translateZ(150px); 
+  background: #e0e0e0 url('19.jpg') no-repeat;
+background-size: 150%;
+}
+.right3 { -webkit-transform: rotateY(90deg) translateZ(150px); 
+  background: #e0e0e0 url('20.jpg') no-repeat;
+background-size: 170%;
+}
+
+@-webkit-keyframes rotate {
+  0% { -webkit-transform: rotateY(0); }
+  100% { -webkit-transform: rotateY(360deg); }
+}
+
+.cube3 { -webkit-animation: rotate 10s infinite linear; }
+
+
+
+.front3:before { -webkit-animation: frontShading1 10s infinite linear; }
+
+@-webkit-keyframes frontShading1 {
+  2% { opacity: 0; }
+  25% { opacity: 0.8; }
+  35% { opacity: 0.8; }
+  50% { opacity: 0; }
+}
+
+.top3:after {
+  opacity: 0.5; width: 200%; height: 200%;
+  margin-right: -50%; margin-top: -50%;
+  background: -webkit-radial-gradient(bottom, rgba(0, 0, 0, 0), #000000);
+-webkit-animation: rotateTop 10s infinite linear;
+}
+@-webkit-keyframes rotateTop {
+  0% { -webkit-transform: rotateZ(0); }
+  100% { -webkit-transform: rotateZ(360deg); }
+}
+
+.bottom3 {
+  -webkit-box-shadow: 0 10px 100px rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0);
+}
+
+
+
+
+
+
+.stage4 {
+margin-left:1in;
+float:left;
+margin-top:1in;
+  width: 300px; height: 300px;
+  -webkit-perspective: 1600px;
+  -webkit-perspective-origin: 50% -240px;
+}
+
+figure4 {
+  display: block; position: absolute;
+  width: 300px; height: 300px;
+  background-image: url('.jpg');
+  background-size: 100%;
+
+  -webkit-box-reflect: below 0 -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(RGBA(0, 0, 0, 0.1)));
+}
+
+.cube4 { -webkit-transform-style: preserve-3d; }
+figure4 { -webkit-transform-origin: 50% 50% 0; }
+.front4 { -webkit-transform: translateZ(150px); 
+  background: #e0e0e0 url('21.jpg') no-repeat;
+}
+.back4 { -webkit-transform: rotateY(180deg) translateZ(150px); 
+  background: #e0e0e0 url('22.jpg') no-repeat;
+background-size: 160%;
+}
+
+.top4
+ {
+ -webkit-transform: rotateX(90deg) translateZ(150px); 
+background-image: url('23.jpg');
+  background-size: 170%;
+
+}
+.bottom4 { -webkit-transform: rotateX(-90deg) translateZ(150px); 
+}
+.left4 { -webkit-transform: rotateY(-90deg) translateZ(150px); 
+  background: #e0e0e0 url('24.jpg') no-repeat;
+background-size: 150%;
+}
+.right4 { -webkit-transform: rotateY(90deg) translateZ(150px); 
+  background: #e0e0e0 url('2.jpg') no-repeat;
+background-size: 150%;
+}
+
+@-webkit-keyframes rotate {
+  0% { -webkit-transform: rotateY(0); }
+  100% { -webkit-transform: rotateY(360deg); }
+}
+
+.cube4 { -webkit-animation: rotate 10s infinite linear; }
+
+
+
+.front4:before { -webkit-animation: frontShading1 10s infinite linear; }
+
+@-webkit-keyframes frontShading1 {
+  2% { opacity: 0; }
+  25% { opacity: 0.8; }
+  35% { opacity: 0.8; }
+  50% { opacity: 0; }
+}
+
+.top4:after {
+  opacity: 0.5; width: 200%; height: 200%;
+  margin-right: -50%; margin-top: -50%;
+  background: -webkit-radial-gradient(bottom, rgba(0, 0, 0, 0), #000000);
+-webkit-animation: rotateTop 10s infinite linear;
+}
+@-webkit-keyframes rotateTop {
+  0% { -webkit-transform: rotateZ(0); }
+  100% { -webkit-transform: rotateZ(360deg); }
+}
+
+.bottom4 {
+  -webkit-box-shadow: 0 10px 100px rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0);
+}
+</style>
+</head>
+<body bgcolor="#E8E8E8">
+<div class="topup">
+<a href="index.html">
+<img src="logo black psd copy.png" align="left" class="img1" onmouseover="this.src='logo white psd copy.png'" onmouseout="this.src='logo black psd copy.png'"> 
+</a>
+<a href="avi.html">
+<img src="info bold psd copy.jpg" align="right" class="img2" height="40cm" width="120cm" onmouseover="this.src='info broken psd copy.jpg'" onmouseout="this.src='info bold psd copy.jpg'">
+</a>
+<a href="index.html"><img src="home psd copy.jpg" align="right" class="img3" onmouseover="this.src='home logo big copy.png'" onmouseout="this.src='home psd copy.jpg'"></a>
+</div>
+<br><br><br><br><br>
+<center>
+<img src="reel copy.png" height="41%">
+</center>
+<br><br>
+<br><br>
+<div class="middle">
+<center><h1> Welcome to Cube Room</h1></center><br><Br>
+</div>
+
+
+
+
+
+
+
+<div class="stage">
+  <div class="cube">
+    <figure class="back"></figure>
+    <figure class="top"></figure>
+    <figure class="bottom"></figure>
+    <figure class="left"></figure>
+    <figure class="right"></figure>
+    <figure class="front"></figure>
+  </div>
+</div>
+</a>
+<div class="stage1">
+  <div class="cube1">
+    <figure class="back1"></figure>
+    <figure class="top1"></figure>
+    <figure class="bottom1"></figure>
+    <figure class="left1"></figure>
+    <figure class="right1"></figure>
+    <figure class="front1"></figure>
+  </div>
+</div>
+
+<div class="stage2">
+  <div class="cube2">
+    <figure class="back2"></figure>
+    <figure class="top2"></figure>
+    <figure class="bottom2"></figure>
+    <figure class="left2"></figure>
+    <figure class="right2"></figure>
+    <figure class="front2"></figure>
+  </div>
+</div>
+
+<div class="stage3">
+  <div class="cube3">
+    <figure class="back3"></figure>
+    <figure class="top3"></figure>
+    <figure class="bottom3"></figure>
+    <figure class="left3"></figure>
+    <figure class="right3"></figure>
+    <figure class="front3"></figure>
+  </div>
+</div>
+
+<div class="stage4">
+  <div class="cube4">
+    <figure class="back4"></figure>
+    <figure class="top4"></figure>
+    <figure class="bottom4"></figure>
+    <figure class="left4"></figure>
+    <figure class="right4"></figure>
+    <figure class="front4"></figure>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+</b><center><h4>SHARE</center></b></h4>
+
+<table border="0" width="100%">
+<tr>
+<td bgcolor="#FBFBFB"><center><a href="https://www.facebook.com/" class="fb"><img src="fb copy.png" class="img4"></a>
+<td bgcolor="#FBFBFB"><center><a href="https://twitter.com/" class="fb"><img src="twitter copy.png" class="img4"></a>
+<td bgcolor="#FBFBFB"><center><a href="https://in.linkedin.com/" class="fb"><img src="in copy.png" class="img4"></a>
+<td bgcolor="#FBFBFB"><center><a href="https://in.pinterest.com/" class="fb"><img src="pin copy.png" class="img4"></a>
+</tr>
+</table>
+
+
+<div class="bottomlast">
+<hr size="3" color="black">
+<center>
+<h5>© Copyright 2015 womenempowerment.org | All Rights Reserved<br>
+site designed by: Aviiral Goel
+</h5>
+</center>
+</div>
+
+
+</body>
+</html>
